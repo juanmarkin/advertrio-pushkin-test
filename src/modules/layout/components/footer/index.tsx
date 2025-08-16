@@ -42,11 +42,6 @@ export function Footer() {
         return () => document.removeEventListener('resize', setWidth);
     }, []);
 
-    useEffect(() => {
-        console.log('scaleWidth:', scaleWidth);
-        console.log('position:', calculateButtonPosition(buttonPosition, scaleWidth));
-    }, [scaleWidth, buttonPosition]);
-
     return (
         <footer className={styles.footer}>
             <div className='wrapper'>

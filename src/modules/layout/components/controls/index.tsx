@@ -2,16 +2,18 @@
 
 import styles from './styles.module.scss';
 import { useAppSelector } from '../../../shared/hooks/use-app-selector';
-import { selectControlsVisibility } from '../../../shared/store/shared.slice';
+import { selectControlsVisibility, setControlsHidden } from '../../../shared/store/shared.slice';
 import { AnimatePresence, motion } from 'motion/react';
 import { useRouter } from 'next/navigation';
 import cn from 'classnames';
+import { useAppDispatch } from '../../../shared/hooks/use-app-dispatch';
+import Image from 'next/image';
 
 const controlsLeft = [
     { name: 'Рукописи', link: '/manuscripts' },
-    { name: 'Редакции и варианты', link: '/editions-and-variants' },
-    { name: 'Прижизненные издания', link: '/lifetime-editions' },
-    { name: '*Атрибуты', link: '/attributes' },
+    { name: 'Редакции и варианты', link: '/manuscripts' },
+    { name: 'Прижизненные издания', link: '/manuscripts' },
+    { name: '*Атрибуты', link: '/manuscripts' },
 ];
 
 const controlsRight = [
@@ -29,6 +31,7 @@ export function Controls({ side }: Props) {
     const isVisible = useAppSelector(selectControlsVisibility);
     const router = useRouter();
     const controls = side === 'left' ? controlsLeft : controlsRight;
+    const dispatch = useAppDispatch();
 
     return (
         <AnimatePresence>
@@ -42,18 +45,29 @@ export function Controls({ side }: Props) {
                     exit={{ opacity: 0, x: side === 'left' ? -30 : 30 }}
                     transition={{ type: 'spring', bounce: 0.5 }}
                 >
-                    {controls.map((control, index) => (
-                        <span
-                            className={styles.controls__item}
-                            onClick={() => {
-                                sessionStorage.setItem('animationPlay', 'true');
-                                router.push(control.link);
-                            }}
-                            key={index}
-                        >
-                            {control.name}
-                        </span>
-                    ))}
+                    <div className={styles.controls__items}>
+                        {controls.map((control, index) => (
+                            <span
+                                className={styles.controls__item}
+                                onClick={() => {
+                                    sessionStorage.setItem('animationPlay', 'true');
+                                    dispatch(setControlsHidden(false));
+                                    router.push(control.link);
+                                }}
+                                key={index}
+                            >
+                                {control.name}
+                            </span>
+                        ))}
+                    </div>
+
+                    <Image
+                        className={styles.controls__decor}
+                        src={'/controls-decor.svg'}
+                        width={80}
+                        height={181}
+                        alt=''
+                    />
                 </motion.div>
             )}
         </AnimatePresence>

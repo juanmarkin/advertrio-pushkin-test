@@ -7,38 +7,84 @@
     &__main {
         display: flex;
         align-items: center;
-        background: var(--primary-green);
-        color: white;
+        background: #f9f9f9;
+        color: var(--primary-green);
         font-family: var(--font-spectral-sc);
         font-weight: 600;
         text-transform: uppercase;
         height: 64px;
-        transition: background 0.1s;
+        border-top: 1px solid #d4d4d4;
+        border-bottom: 1px solid #d4d4d4;
         cursor: pointer;
         padding: 0 18px;
 
-        &:hover {
-            background: var(--primary-green-hover);
-        }
+        // &:hover {
+        //     background: var(--primary-green-hover);
+        // }
+    }
+
+    &_active &__main {
+        background: var(--primary-green);
+        border-color: var(--primary-green);
+        color: white;
     }
 
     &__left,
     &__right {
         display: flex;
+        align-items: center;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        width: 27px;
+        height: 64px;
         cursor: pointer;
 
-        svg > path {
+        &:disabled {
+            cursor: auto;
+
+            svg {
+                opacity: 0;
+            }
+        }
+
+        svg path {
+            stroke: var(--primary-green);
             transition: all 0.1s;
         }
 
-        &:hover svg > path {
-            fill: #446252;
+        // &:hover svg path {
+        //     stroke: var(--primary-green);
+        // }
+    }
+
+    &_active &__left,
+    &_active &__right {
+        svg path {
+            stroke: white;
         }
     }
 
     &__right {
+        justify-content: flex-end;
+        background-image: url('/button-right-bg.svg');
+        padding-right: 8px;
+
         svg {
             transform: rotate(180deg);
         }
+    }
+
+    &__left {
+        background-image: url('/button-left-bg.svg');
+        padding-left: 8px;
+    }
+
+    &_active &__left {
+        background-image: url('/button-left-active-bg.svg');
+    }
+
+    &_active &__right {
+        background-image: url('/button-right-active-bg.svg');
     }
 }
