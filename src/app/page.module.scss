@@ -1,0 +1,17 @@
+.page {
+    &__container {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        height: calc(100svh - 77px);
+    }
+
+    &__aside {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        &_right {
+            justify-content: flex-start;
+        }
+    }
+}

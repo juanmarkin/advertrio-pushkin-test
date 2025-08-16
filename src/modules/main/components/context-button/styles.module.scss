@@ -1,0 +1,44 @@
+.contextButton {
+    display: flex;
+    background: white;
+    z-index: 2;
+    padding: 0 20px;
+
+    &__main {
+        display: flex;
+        align-items: center;
+        background: var(--primary-green);
+        color: white;
+        font-family: var(--font-spectral-sc);
+        font-weight: 600;
+        text-transform: uppercase;
+        height: 64px;
+        transition: background 0.1s;
+        cursor: pointer;
+        padding: 0 18px;
+
+        &:hover {
+            background: var(--primary-green-hover);
+        }
+    }
+
+    &__left,
+    &__right {
+        display: flex;
+        cursor: pointer;
+
+        svg > path {
+            transition: all 0.1s;
+        }
+
+        &:hover svg > path {
+            fill: #446252;
+        }
+    }
+
+    &__right {
+        svg {
+            transform: rotate(180deg);
+        }
+    }
+}

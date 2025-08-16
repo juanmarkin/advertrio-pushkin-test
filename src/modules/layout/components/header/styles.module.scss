@@ -1,0 +1,45 @@
+.header {
+    border-bottom: 1px solid #d4d4d4;
+    background: #f9f9f9;
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 60px;
+        height: 76px;
+    }
+
+    &__menu {
+        ul {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            height: 76px;
+
+            li {
+                list-style: none;
+                font-size: 16px;
+
+                a {
+                    color: var(--menu-link-color);
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    &__actions {
+        display: flex;
+        gap: 36px;
+        margin-left: auto;
+    }
+
+    &__button {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        color: var(--menu-link-color);
+        cursor: pointer;
+    }
+}

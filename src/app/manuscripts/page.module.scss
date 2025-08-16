@@ -1,0 +1,14 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    transition: all 1s;
+
+    &_final {
+        grid-template-columns: 3fr 1fr 0fr;
+        transition: none;
+    }
+
+    &_animate {
+        grid-template-columns: 3fr 1fr 0fr;
+    }
+}

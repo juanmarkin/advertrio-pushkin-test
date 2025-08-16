@@ -1,0 +1,46 @@
+:root {
+    --background: #ffffff;
+    --foreground: #171717;
+    --primary-green: #3a5547;
+    --primary-green-hover: #446252;
+
+    --menu-link-color: #6a6a6a;
+    --text-light-color: #959595;
+    --text-green-color: #5e8966;
+}
+
+html,
+body {
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+body {
+    color: var(--foreground);
+    background: var(--background);
+    font-family: var(--font-roboto), sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow: hidden;
+}
+
+button {
+    appearance: none;
+    background: none;
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 1600px;
+    padding: 0 40px;
+    margin: 0 auto;
+}

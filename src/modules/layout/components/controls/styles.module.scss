@@ -1,0 +1,29 @@
+.controls {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 30px;
+    font-family: var(--font-spectral-sc);
+    color: var(--text-green-color);
+    font-size: 20px;
+    font-weight: 600;
+
+    &_right {
+        align-items: flex-start;
+    }
+
+    &__item {
+        cursor: pointer;
+        transition: transform 0.3s;
+
+        &:hover {
+            transform: translateX(10px);
+        }
+    }
+
+    &_right &__item {
+        &:hover {
+            transform: translateX(-10px);
+        }
+    }
+}

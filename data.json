@@ -1,0 +1,86 @@
+{
+    "paper_type": "work",
+    "title": "«А в ненастные дни…»",
+    "title_search": "А в ненастные дни",
+    "preview": "<p class=\"stixi\" s_num=\"1\">А в ненастные дни</p><p class=\"stixi\" s_num=\"2\">Собирались они</p><p class=\"stixi4\" s_num=\"3\">Часто.</p><p class=\"stixi\" s_num=\"4\">Гнули, &lt;- - - -&gt; их &lt;- - -&gt;!</p><p class=\"stixi\" s_num=\"5\">От пятидесяти</p>",
+    "text": "<p class=\"stixi\" s_num=\"1\">А в ненастные дни</p><p class=\"stixi\" s_num=\"2\">Собирались они</p><p class=\"stixi4\" s_num=\"3\">Часто.</p><p class=\"stixi\" s_num=\"4\">Гнули, &lt;- - - -&gt; их &lt;- - -&gt;!</p><p class=\"stixi\" s_num=\"5\">От пятидесяти</p><p class=\"stixi4\" s_num=\"6\">На сто.</p><p class=\"stixi\" s_num=\"7\">И выигрывали</p><p class=\"stixi\" s_num=\"8\">И отписывали</p><p class=\"stixi4\" s_num=\"9\">Мелом.</p><p class=\"stixi\" s_num=\"10\">Так в ненастные дни</p><p class=\"stixi\" s_num=\"11\">Занимались они</p><p class=\"stixi4\" s_num=\"12\">Делом.</p><p><br>&nbsp;</p>",
+    "author": "Пушкин А.С.",
+    "date_written": "1828",
+    "place_written": "",
+    "rubric_id": "1",
+    "rubrics": ["1"],
+    "approved": false,
+    "css_style": " DIV#verse { width: 29em; }\r\nSPAN.verseno { position: absolute; left: 2em; margin: 0; font: normal 80%; width: 5em; text-align: right; }\r\nP.stixi { text-align: left; margin-left: 6em; margin-top: 0em; }\r\nP.stixi4 { text-align: left; margin-left: 9em; margin-top: 0em; }\r\n",
+    "year_not_earlier": 1828,
+    "year_not_later": 1828,
+    "encyclopedia_articles": ["09ec9bda-8803-4d3a-b348-df89bc06b540"],
+    "texts": ["54a67170-9753-4f2c-9604-1b4c4231c851"],
+    "handwritings": [
+        {
+            "id": "2c2ef36b-545f-4c6a-8f44-70b9c8cca4be",
+            "is_clean": false,
+            "is_draft": false,
+            "comment_text": "в письме к П. А. Вяземскому от 1 сентября 1828 г.",
+            "group_number": 1,
+            "group_page_index": 1,
+            "internal_code": "ПД 1363",
+            "pages": " л. 1",
+            "slug": "pd-1363-l-1"
+        }
+    ],
+    "bibliographies": [
+        {
+            "id": "2dd33b83-43b3-4ee2-b563-3584c24d4dfb",
+            "name": "Рылеев К. Ф. Полн. собр. стихотворений. [Л., 1934].  (примеч. Ю. Г. Оксмана) C. 509-513"
+        },
+        {
+            "id": "374c0cf4-c7ce-44b2-985f-5cfbc7cf909a",
+            "name": "Макогоненко Г. П. Творчество А. С. Пушкина в 1830-е годы (1833-1836). Л.: Худож. лит., 1982. C. 218-220"
+        },
+        {
+            "id": "9aa74a90-7e9a-498b-8c45-3faf3dab0388",
+            "name": "Эйдельман Н. Я. Пушкин: Из биографии и творчества 1826–1837. М., 1987. C. 288-296"
+        },
+        {
+            "id": "ec2aa279-5a4e-428d-9659-e010196e4906",
+            "name": "Лернер Н. О. Заметки о Пушкине // ПиС. Вып. 16. C. 20-23"
+        },
+        {
+            "id": "ef7f8918-8754-4db7-aea5-fd9708a9f8cc",
+            "name": "Эйдельман Н. Я. «А в ненастные дни…» // Звезда. 1974. № 6. C. 205-207"
+        }
+    ],
+    "editions": ["01f00882-818b-44e3-aea4-fdf53d0057c7"],
+    "comments": null,
+    "text_textology": ["8606f17a-44c3-4ade-8a84-983658083fcb"],
+    "text_redaction": [],
+    "redactions_brief": [],
+    "additional_data": { "alternative_names": null },
+    "slug": "a-v-nenastnye-dni-a1",
+    "has_attributes": true,
+    "has_correlates": true,
+    "comments_list": ["5e6a1c72-4a58-4e72-bf6a-df81f04a061b"],
+    "uid": null,
+    "section": null,
+    "number": null,
+    "from_person": null,
+    "to_person": null,
+    "to_person_sort": null,
+    "to_person_dativ": null,
+    "dated": null,
+    "from_place": null,
+    "to_place": null,
+    "initial_lines": null,
+    "language": null,
+    "verses": null,
+    "original": null,
+    "type": null,
+    "sources": null,
+    "postmark": null,
+    "application": null,
+    "linked_objects": null,
+    "snippet": null,
+    "is_deleted": false,
+    "text_objs": [],
+    "id": "0de7d97f-c0ea-4de9-b334-c806c42a705a"
+}
