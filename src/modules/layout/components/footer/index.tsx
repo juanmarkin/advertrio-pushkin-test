@@ -49,10 +49,17 @@ export function Footer() {
             <div className='wrapper'>
                 <div className={styles.footer__wrapper}>
                     <div className={styles.footer__scale}>
-                        <div className={cn(styles.footer__scalePoint, styles.footer__scalePoint_start)}>
+                        <div
+                            className={cn(
+                                styles.footer__scalePoint,
+                                styles.footer__scalePoint_start,
+                            )}
+                        >
                             <TimelinePoint year='1799' />
                         </div>
-                        <div className={cn(styles.footer__scalePoint, styles.footer__scalePoint_end)}>
+                        <div
+                            className={cn(styles.footer__scalePoint, styles.footer__scalePoint_end)}
+                        >
                             <TimelinePoint year='1837' layout={'right'} />
                         </div>
                     </div>

@@ -7,6 +7,7 @@ import {
     selectControlsVisibility,
     setControlsHidden,
     setControlsVisible,
+    setMainPageAnimation,
 } from '../../../shared/store/shared.slice';
 import styles from './styles.module.scss';
 import cn from 'classnames';
@@ -31,6 +32,7 @@ export function ContextButton() {
                     dispatch(setControlsHidden(false));
 
                     if (buttonPosition === 'left') {
+                        dispatch(setMainPageAnimation('left'));
                         router.push('/');
                         return;
                     }
@@ -48,6 +50,13 @@ export function ContextButton() {
                         dispatch(setControlsVisible());
                         return;
                     }
+
+                    if (buttonPosition === 'left') {
+                        dispatch(setMainPageAnimation('left'));
+                    } else {
+                        dispatch(setMainPageAnimation('right'));
+                    }
+
                     router.push('/');
                 }}
             >
@@ -60,6 +69,7 @@ export function ContextButton() {
                     dispatch(setControlsHidden(false));
 
                     if (buttonPosition === 'right') {
+                        dispatch(setMainPageAnimation('right'));
                         router.push('/');
                         return;
                     }
@@ -77,7 +87,12 @@ export function ContextButton() {
 const ArrowIcon = () => (
     <svg xmlns='http://www.w3.org/2000/svg' width='12' height='48' viewBox='0 0 12 48' fill='none'>
         <g clipPath='url(#clip0_5_837)'>
-            <path d='M10.25 2L2 24L10.25 46' stroke='white' strokeWidth='2' strokeLinecap='square' />
+            <path
+                d='M10.25 2L2 24L10.25 46'
+                stroke='white'
+                strokeWidth='2'
+                strokeLinecap='square'
+            />
         </g>
         <defs>
             <clipPath id='clip0_5_837'>

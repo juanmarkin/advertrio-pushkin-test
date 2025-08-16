@@ -6,6 +6,14 @@
         grid-template-columns: 1fr 2fr 1fr;
         gap: 24px;
         height: calc(100svh - 122px);
+
+        &_animateLeft {
+            animation: animationLeft 1s 1 forwards;
+        }
+
+        &_animateRight {
+            animation: animationRight 1s 1 forwards;
+        }
     }
 
     &__aside {
@@ -16,5 +24,23 @@
         &_right {
             justify-content: flex-start;
         }
+    }
+}
+
+@keyframes animationLeft {
+    0% {
+        grid-template-columns: 0fr 1fr 3fr;
+    }
+    100% {
+        grid-template-columns: 1fr 2fr 1fr;
+    }
+}
+
+@keyframes animationRight {
+    0% {
+        grid-template-columns: 3fr 1fr 0fr;
+    }
+    100% {
+        grid-template-columns: 1fr 2fr 1fr;
     }
 }
