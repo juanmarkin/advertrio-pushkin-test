@@ -1,0 +1,33 @@
+.placeholderLoader {
+    &__container {
+        height: inherit;
+        position: relative;
+        background: #f4f4f6;
+        overflow: hidden;
+
+        &_containerCircle {
+            border-radius: 50%;
+        }
+    }
+
+    &__background {
+        position: absolute;
+        width: 75%;
+        height: inherit;
+        background: linear-gradient(270deg, #f4f4f6 0%, #e2e5ea 50.5%, #f4f4f6 100%);
+        animation-duration: 1.25s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+        animation-name: placeHolderShimmer;
+        animation-timing-function: linear;
+    }
+
+    @keyframes placeHolderShimmer {
+        0% {
+            left: -100%;
+        }
+        100% {
+            left: 200%;
+        }
+    }
+}

@@ -12,10 +12,12 @@ import cn from 'classnames';
 export default function Home() {
     const dispatch = useAppDispatch();
 
+    // Set initial button position
     useEffect(() => {
         dispatch(setContextButtonPosition('center'));
     }, []);
 
+    // Set controls hidden
     useEffect(() => {
         dispatch(setControlsHidden(false));
     }, []);

@@ -1,7 +1,10 @@
 .page {
+    padding-top: 20px;
+
     &__container {
         display: grid;
         grid-template-columns: 1fr 2fr 1fr;
+        gap: 24px;
         height: calc(100svh - 122px);
     }
 

@@ -5,6 +5,8 @@ import styles from './styles.module.scss';
 import { useAppSelector } from '../../../shared/hooks/use-app-selector';
 import { ContextButtonType, selectContextButtonPosition } from '../../../shared/store/shared.slice';
 import { useEffect, useState } from 'react';
+import { TimelinePoint } from '../timeline-point';
+import cn from 'classnames';
 
 export function Footer() {
     const buttonPosition = useAppSelector(selectContextButtonPosition);
@@ -18,7 +20,7 @@ export function Footer() {
                 };
             case 'left':
                 return {
-                    transform: `translateX(${(-1 * scaleWidth) / 2 - 400}px)`,
+                    transform: `translateX(${(-1 * scaleWidth) / 2 + 200}px)`,
                 };
             case 'right':
                 return {
@@ -46,7 +48,14 @@ export function Footer() {
         <footer className={styles.footer}>
             <div className='wrapper'>
                 <div className={styles.footer__wrapper}>
-                    <div className={styles.footer__scale}></div>
+                    <div className={styles.footer__scale}>
+                        <div className={cn(styles.footer__scalePoint, styles.footer__scalePoint_start)}>
+                            <TimelinePoint year='1799' />
+                        </div>
+                        <div className={cn(styles.footer__scalePoint, styles.footer__scalePoint_end)}>
+                            <TimelinePoint year='1837' layout={'right'} />
+                        </div>
+                    </div>
                     <div
                         className={styles.footer__contextButton}
                         style={calculateButtonPosition(buttonPosition, scaleWidth)}

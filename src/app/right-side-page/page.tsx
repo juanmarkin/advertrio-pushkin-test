@@ -9,13 +9,13 @@ import { setContextButtonPosition } from '../../modules/shared/store/shared.slic
 import { PlaceholderLoader } from '../../modules/shared/components/placeholder-loader';
 import { AnimatePresence, motion } from 'motion/react';
 
-export default function ManuscriptsPage() {
+export default function CommentsPage() {
     const [finalLayout, setFinalLayout] = useState<boolean>(false);
     const [animate, setAnimate] = useState<boolean>(false);
     const dispatch = useAppDispatch();
 
     useEffect(() => {
-        dispatch(setContextButtonPosition('right'));
+        dispatch(setContextButtonPosition('left'));
     }, []);
 
     useEffect(() => {
@@ -43,12 +43,16 @@ export default function ManuscriptsPage() {
                         [styles.wrapper_animate]: animate,
                     })}
                 >
+                    <div />
+                    <div>
+                        <Source animationStart />
+                    </div>
                     <div className={styles.content}>
                         <AnimatePresence>
                             <motion.div
-                                initial={{ opacity: 0, x: -100 }}
+                                initial={{ opacity: 0, x: 100 }}
                                 animate={{ opacity: 1, x: 0 }}
-                                exit={{ opacity: 0, x: -100 }}
+                                exit={{ opacity: 0, x: 100 }}
                                 transition={{ delay: 0.5, duration: 0.5 }}
                             >
                                 <PlaceholderLoader width={'100%'} height={600} borderRadius={30} />
@@ -56,19 +60,15 @@ export default function ManuscriptsPage() {
                         </AnimatePresence>
                         <AnimatePresence>
                             <motion.div
-                                initial={{ opacity: 0, x: -100 }}
+                                initial={{ opacity: 0, x: 100 }}
                                 animate={{ opacity: 1, x: 0 }}
-                                exit={{ opacity: 0, x: -100 }}
+                                exit={{ opacity: 0, x: 100 }}
                                 transition={{ delay: 0.3, duration: 0.5 }}
                             >
                                 <PlaceholderLoader width={'100%'} height={600} borderRadius={30} />
                             </motion.div>
                         </AnimatePresence>
                     </div>
-                    <div>
-                        <Source animationStart />
-                    </div>
-                    <div />
                 </div>
             </div>
         </div>

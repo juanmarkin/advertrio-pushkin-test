@@ -1,0 +1,22 @@
+.point {
+    display: flex;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--primary-green);
+
+    &::before {
+        content: '';
+        width: 7px;
+        height: 7px;
+        background: var(--primary-green);
+        transform: rotate(45deg);
+        position: relative;
+        top: -15px;
+        box-shadow: 0 0 0 5px white;
+    }
+
+    &_right {
+        flex-direction: row-reverse;
+    }
+}

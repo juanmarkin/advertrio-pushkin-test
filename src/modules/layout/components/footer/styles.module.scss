@@ -41,6 +41,20 @@
         }
     }
 
+    &__scalePoint {
+        position: absolute;
+        top: 44px;
+        z-index: 2;
+
+        &_start {
+            left: 25px;
+        }
+
+        &_end {
+            right: 25px;
+        }
+    }
+
     &__contextButton {
         position: absolute;
         top: 0;

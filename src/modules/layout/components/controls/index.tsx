@@ -17,10 +17,10 @@ const controlsLeft = [
 ];
 
 const controlsRight = [
-    { name: 'Научные комментарии', link: '/ыcientific-сomments' },
-    { name: 'Библиография', link: '/bibliography' },
-    { name: 'Экскурсы', link: '/excursions' },
-    { name: 'Упоминания', link: '/mentions' },
+    { name: 'Научные комментарии', link: '/right-side-page' },
+    { name: 'Библиография', link: '/right-side-page' },
+    { name: 'Экскурсы', link: '/right-side-page' },
+    { name: 'Упоминания', link: '/right-side-page' },
 ];
 
 type Props = {

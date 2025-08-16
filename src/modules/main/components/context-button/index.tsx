@@ -64,8 +64,9 @@ export function ContextButton() {
                         return;
                     }
 
-                    router.push('/manuscripts');
+                    router.push('/right-side-page');
                 }}
+                disabled={buttonPosition === 'left'}
             >
                 <ArrowIcon />
             </button>
