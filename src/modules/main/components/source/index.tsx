@@ -9,7 +9,7 @@ const source = {
     text: `
         <p class=\"stixi\" s_num=\"1\">А в ненастные дни</p><p class=\"stixi\" s_num=\"2\">Собирались они</p><p class=\"stixi4\" s_num=\"3\">Часто.</p><p class=\"stixi\" s_num=\"4\">Гнули, &lt;- - - -&gt; их &lt;- - -&gt;!</p><p class=\"stixi\" s_num=\"5\">От пятидесяти</p><p class=\"stixi4\" s_num=\"6\">На сто.</p><p class=\"stixi\" s_num=\"7\">И выигрывали</p><p class=\"stixi\" s_num=\"8\">И отписывали</p><p class=\"stixi4\" s_num=\"9\">Мелом.</p><p class=\"stixi\" s_num=\"10\">Так в ненастные дни</p><p class=\"stixi\" s_num=\"11\">Занимались они</p><p class=\"stixi4\" s_num=\"12\">Делом.</p><p><br>&nbsp;</p>
 `,
-    title: `«Внемли, о Гелиос,<br/>серебряным луком звенящий…»`,
+    title: `«Внемли, о Гелиос,<br/>серебряным луком<br/> звенящий…»`,
 };
 
 type Props = {
@@ -19,6 +19,7 @@ type Props = {
 export function Source({ animationStart = false }: Props) {
     const buttonPosition = useAppSelector(selectContextButtonPosition);
     const isAside = buttonPosition === 'right' || buttonPosition === 'left';
+    const isCenter = buttonPosition === 'center';
 
     return (
         <div className={styles.container}>
@@ -38,6 +39,7 @@ export function Source({ animationStart = false }: Props) {
                 <h1
                     className={cn(styles.source__title, {
                         [styles.source__title_aside]: isAside,
+                        [styles.source__title_center]: isCenter,
                     })}
                     dangerouslySetInnerHTML={{ __html: source.title }}
                 />

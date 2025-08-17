@@ -1,16 +1,11 @@
 .wrapper {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 0fr 1fr 3fr;
     transition: all 1s;
     padding-top: 20px;
 
-    &_final {
-        grid-template-columns: 0fr 1fr 3fr;
-        transition: none;
-    }
-
     &_animate {
-        grid-template-columns: 0fr 1fr 3fr;
+        animation: gridAnimation 1s 1 forwards;
     }
 }
 
@@ -19,4 +14,13 @@
     grid-template-columns: 2fr 1fr;
     gap: 24px;
     margin-left: 24px;
+}
+
+@keyframes gridAnimation {
+    0% {
+        grid-template-columns: 1fr 2fr 1fr;
+    }
+    100% {
+        grid-template-columns: 0fr 1fr 3fr;
+    }
 }

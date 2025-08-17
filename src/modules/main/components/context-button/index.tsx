@@ -8,6 +8,7 @@ import {
     setControlsHidden,
     setControlsVisible,
     setMainPageAnimation,
+    setPageAnimated,
 } from '../../../shared/store/shared.slice';
 import styles from './styles.module.scss';
 import cn from 'classnames';
@@ -37,6 +38,7 @@ export function ContextButton() {
                         return;
                     }
 
+                    dispatch(setPageAnimated(true));
                     router.push('/manuscripts');
                 }}
                 disabled={buttonPosition === 'right'}
@@ -74,6 +76,7 @@ export function ContextButton() {
                         return;
                     }
 
+                    dispatch(setPageAnimated(true));
                     router.push('/right-side-page');
                 }}
                 disabled={buttonPosition === 'left'}

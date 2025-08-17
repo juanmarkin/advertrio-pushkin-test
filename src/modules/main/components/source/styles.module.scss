@@ -16,11 +16,17 @@
         max-width: 500px;
         will-change: line-height;
         transform: translateZ(0);
-        margin-bottom: 26px;
+        margin: 0 0 26px;
 
         &_aside {
             font-size: 22px;
             line-height: calc(1.2 * 22px);
+            transition: all 1s;
+        }
+
+        &_center {
+            font-size: 28px;
+            line-height: calc(1.2 * 28px);
             transition: all 1s;
         }
     }
@@ -34,7 +40,7 @@
         // }
 
         // &_aside {
-        //     font-size: 11px;
+        //     font-size: 2.9cqw;
         // }
 
         p {
@@ -45,7 +51,7 @@
             transform: translateZ(0);
 
             &:not(:last-child) {
-                margin-bottom: calc(1.5 * 2.5cqw);
+                margin: 0 0 calc(1.5 * 2.5cqw);
             }
         }
     }

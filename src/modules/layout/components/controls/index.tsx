@@ -2,7 +2,11 @@
 
 import styles from './styles.module.scss';
 import { useAppSelector } from '../../../shared/hooks/use-app-selector';
-import { selectControlsVisibility, setControlsHidden } from '../../../shared/store/shared.slice';
+import {
+    selectControlsVisibility,
+    setControlsHidden,
+    setPageAnimated,
+} from '../../../shared/store/shared.slice';
 import { AnimatePresence, motion } from 'motion/react';
 import { useRouter } from 'next/navigation';
 import cn from 'classnames';
@@ -50,7 +54,7 @@ export function Controls({ side }: Props) {
                             <span
                                 className={styles.controls__item}
                                 onClick={() => {
-                                    sessionStorage.setItem('animationPlay', 'true');
+                                    dispatch(setPageAnimated(true));
                                     dispatch(setControlsHidden(false));
                                     router.push(control.link);
                                 }}

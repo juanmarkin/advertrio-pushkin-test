@@ -7,6 +7,7 @@ interface IPageState {
     isControlsVisible: boolean;
     contextButtonPosition: ContextButtonType;
     mainPageAnimation?: MainPageAnimationType;
+    isPageAnimated?: boolean;
 }
 
 const initialState: IPageState = {
@@ -33,11 +34,15 @@ export const sharedSlice = createSlice({
         ) => {
             state.mainPageAnimation = actions.payload;
         },
+        setPageAnimated: (state, actions: PayloadAction<boolean>) => {
+            state.isPageAnimated = actions.payload;
+        },
     },
     selectors: {
         selectControlsVisibility: (state) => state.isControlsVisible,
         selectContextButtonPosition: (state) => state.contextButtonPosition,
         selectMainPageAnimation: (state) => state.mainPageAnimation,
+        selectPageAnimated: (state) => state.isPageAnimated,
     },
 });
 
@@ -46,7 +51,12 @@ export const {
     setControlsHidden,
     setContextButtonPosition,
     setMainPageAnimation,
+    setPageAnimated,
 } = sharedSlice.actions;
-export const { selectControlsVisibility, selectContextButtonPosition, selectMainPageAnimation } =
-    sharedSlice.selectors;
+export const {
+    selectControlsVisibility,
+    selectContextButtonPosition,
+    selectMainPageAnimation,
+    selectPageAnimated,
+} = sharedSlice.selectors;
 export const name: string = sharedSlice.name;
