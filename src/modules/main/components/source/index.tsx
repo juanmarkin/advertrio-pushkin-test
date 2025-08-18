@@ -38,14 +38,15 @@ export function Source({ animationStart = false }: Props) {
             <div className={styles.source}>
                 <h1
                     className={cn(styles.source__title, {
-                        [styles.source__title_aside]: isAside,
-                        [styles.source__title_center]: isCenter,
+                        [styles.source__title_decrease]: isAside,
+                        [styles.source__title_increase]: isCenter,
                     })}
                     dangerouslySetInnerHTML={{ __html: source.title }}
                 />
                 <div
                     className={cn(styles.source__text, {
-                        [styles.source__text_aside]: isAside,
+                        [styles.source__text_decrease]: isAside,
+                        [styles.source__text_increase]: isCenter,
                     })}
                     dangerouslySetInnerHTML={{ __html: source.text }}
                 />

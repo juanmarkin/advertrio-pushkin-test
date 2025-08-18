@@ -70,6 +70,7 @@ export function Controls({ side }: Props) {
                         src={'/controls-decor.svg'}
                         width={80}
                         height={181}
+                        priority
                         alt=''
                     />
                 </motion.div>

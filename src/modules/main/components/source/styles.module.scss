@@ -9,7 +9,7 @@
 
     &__title {
         font-family: var(--font-spectral-sc);
-        line-height: calc(1.2 * 28px);
+        // line-height: calc(1.2 * 3.5cqw);
         color: var(--primary-green);
         font-size: 28px;
         text-align: center;
@@ -18,34 +18,28 @@
         transform: translateZ(0);
         margin: 0 0 26px;
 
-        &_aside {
-            font-size: 22px;
-            line-height: calc(1.2 * 22px);
-            transition: all 1s;
+        &_decrease {
+            animation: decreaseTitle 1s 1 forwards;
         }
 
-        &_center {
-            font-size: 28px;
-            line-height: calc(1.2 * 28px);
-            transition: all 1s;
+        &_increase {
+            animation: increaseTitle 1s 1 forwards;
         }
     }
 
     &__text {
-        font-size: 2.9cqw;
-        // font-size: 18px;
+        font-size: 18px;
 
-        // &_animated {
-        //     animation: fontAnimation 1s 1 forwards;
-        // }
+        &_decrease {
+            animation: decreaseFont 1s 1 forwards;
+        }
 
-        // &_aside {
-        //     font-size: 2.9cqw;
-        // }
+        &_increase {
+            animation: increaseFont 1s 1 forwards;
+        }
 
         p {
             font-family: var(--font-spectral);
-            // font-size: 2.5cqw;
             line-height: 0;
             will-change: margin-bottom;
             transform: translateZ(0);
@@ -72,11 +66,46 @@
     border-top: 1px solid #d4d4d4;
 }
 
-@keyframes fontAnimation {
+@keyframes increaseFont {
+    0% {
+        font-size: 11px;
+        line-height: calc(1.5 * 11px);
+    }
+    100% {
+        font-size: 18px;
+        line-height: calc(1.5 * 18px);
+    }
+}
+
+@keyframes decreaseFont {
     0% {
         font-size: 18px;
+        line-height: calc(1.5 * 18px);
     }
     100% {
         font-size: 11px;
+        line-height: calc(1.5 * 11px);
+    }
+}
+
+@keyframes increaseTitle {
+    0% {
+        font-size: 22px;
+        line-height: calc(1.2 * 22px);
+    }
+    100% {
+        font-size: 28px;
+        line-height: calc(1.2 * 28px);
+    }
+}
+
+@keyframes decreaseTitle {
+    0% {
+        font-size: 28px;
+        line-height: calc(1.2 * 28px);
+    }
+    100% {
+        font-size: 22px;
+        line-height: calc(1.2 * 22px);
     }
 }

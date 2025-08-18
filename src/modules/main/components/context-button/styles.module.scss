@@ -7,12 +7,14 @@
     &__main {
         display: flex;
         align-items: center;
+        justify-content: center;
         background: #f9f9f9;
         color: var(--primary-green);
         font-family: var(--font-spectral-sc);
         font-weight: 600;
         text-transform: uppercase;
         height: 64px;
+        min-width: 150px;
         border-top: 1px solid #d4d4d4;
         border-bottom: 1px solid #d4d4d4;
         cursor: pointer;

@@ -20,7 +20,7 @@ export function Footer() {
                 };
             case 'left':
                 return {
-                    transform: `translateX(${(-1 * scaleWidth) / 2 + 200}px)`,
+                    transform: `translateX(${(-1 * scaleWidth) / 2 + 150}px)`,
                 };
             case 'right':
                 return {
